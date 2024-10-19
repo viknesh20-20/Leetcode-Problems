@@ -5,8 +5,8 @@
 #         self.next = next
 class Solution(object):
     def addTwoNumbers(self, l1, l2):
-        dummy = ListNode(0)
-        current = dummy
+        l3 = ListNode(0)
+        current = l3
         carry = 0
         while l1 or l2 or carry:
             val1 = l1.val if l1 else 0
@@ -18,5 +18,5 @@ class Solution(object):
             current = current.next
             if l1: l1 = l1.next
             if l2: l2 = l2.next
-        return dummy.next
+        return l3.next
         
