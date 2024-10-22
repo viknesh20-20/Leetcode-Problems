@@ -4,11 +4,9 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        ct=0
-        for i in range(len(s)-1,-1,-1):
-            if s[i].isalpha():
-                ct+=1
-                if s[i-1] == " ":break
-        return ct
+        s = s.strip()
+        arr = s.split(" ")
+        return len(arr[-1])
+            
                 
         
