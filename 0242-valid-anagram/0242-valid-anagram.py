@@ -4,10 +4,8 @@ class Solution(object):
         dict2 = {}
         if len(s) == len(t):
             for i in range(len(s)):
-                sc = s.count(s[i])
-                tc = t.count(t[i])
-                dict1[s[i]] = sc
-                dict2[t[i]] = tc
+                dict1[s[i]] = s.count(s[i])
+                dict2[t[i]] = t.count(t[i])
             for j in dict1:
                 if dict1[j] != dict2.get(j):
                     return False
@@ -15,6 +13,5 @@ class Solution(object):
                     
         else:
             return False
-        print(dict1,dict2)
         
             
